@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country_codes">
+        <item>+1 USA</item>
+        <item>+44 UK</item>
+        <item>+92 Pakistan</item>
+        <item>+91 India</item>
+        <item>+966 Saudi Arabia</item>
+        <!-- Add more country codes as needed -->
+    </string-array>
+</resources>

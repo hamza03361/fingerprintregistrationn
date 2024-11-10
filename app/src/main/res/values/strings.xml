@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fingerprint Registration</string>
+    <string name="captured_image">Captured image</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="get_started">Get Started</string>
+    <string name="capture">Capture</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="close">Close</string>
+</resources>

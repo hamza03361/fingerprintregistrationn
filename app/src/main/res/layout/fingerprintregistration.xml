@@ -1,0 +1,143 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C2E1FF"
+    tools:context=".Fingerprintregistration">
+
+    <!-- FrameLayout to contain and layer small ImageView -->
+    <FrameLayout
+        android:id="@+id/smallImageViewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <!-- Original small ImageView (back arrow) -->
+        <ImageView
+            android:id="@+id/smallImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="start"
+            android:layout_margin="8dp"
+            android:src="@drawable/registrationform1_backarrow" />
+
+        <!-- Additional small ImageView inside FrameLayout -->
+        <ImageView
+            android:id="@+id/smallImageViewInside"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:src="@drawable/registrationform1_smallestarrow" />
+
+    </FrameLayout>
+
+    <!-- Top center TextView (Logo) -->
+    <TextView
+        android:id="@+id/imageview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="70dp"
+        android:text="Fingerprint Registration"
+        android:textColor="@color/themecolor"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="120dp"
+        android:text="Please hold still while taking a photo"
+        android:textColor="@color/themecolor"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview2" />
+
+    <!-- FrameLayout for PreviewView and ProgressBar -->
+    <FrameLayout
+        android:id="@+id/previewFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview3"
+        app:layout_constraintWidth_percent="0.8">
+
+        <!-- PreviewView for camera preview -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- FrameLayout for middleImageView -->
+        <FrameLayout
+            android:id="@+id/middleImageView"
+            android:layout_width="260dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/middleimage"
+            app:layout_constraintTop_toBottomOf="@id/imageview3">
+
+            <!-- ImageView in the middle of PreviewView -->
+            <ImageView
+                android:id="@+id/middlesmallImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+
+        <!-- TextView for Instructions -->
+        <Button
+            android:id="@+id/Capturebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capture"
+            android:background="@drawable/mainactivity_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/middleImageView" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:progress="0"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Capturebutton" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
